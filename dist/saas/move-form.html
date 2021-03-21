@@ -17,7 +17,7 @@
 
 </head>
 <style>
-    .form-control {
+    .form-control-margin {
         margin-bottom: 1.5rem;
     }
 
@@ -46,6 +46,18 @@
 
     .sidebar-outer {
         position: relative;
+    }
+
+    .margin-top-label {
+        margin-top: 0 !important;
+    }
+
+    .margin-bot-div {
+        margin-bottom: 0 !important;
+    }
+
+    .indent-sm {
+        margin-left: 1rem;
     }
 </style>
 
@@ -1020,7 +1032,6 @@
                 <!-- FORM STARTS HERE!!! -->
                 <!-- Start Content-->
                 <div class="container-fluid">
-
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-3 sidebar-outer">
@@ -1029,13 +1040,20 @@
                                     <a href="#client-info" class="list-group-item list-group-item-action">
                                         Client Information
                                     </a>
-                                    <a href="#accessibility" class="list-group-item list-group-item-action">Accessibility</a>
+                                    <a href="#accessibility"
+                                        class="list-group-item list-group-item-action">Accessibility</a>
                                     <a href="#bedrooms" class="list-group-item list-group-item-action">Bedrooms</a>
-                                    <a href="#living-room" class="list-group-item list-group-item-action">Living Room</a>
+                                    <a href="#living-room" class="list-group-item list-group-item-action">Living
+                                        Room</a>
+                                    <a href="#dining-room" class="list-group-item list-group-item-action">Dining
+                                        Room</a>
+                                    <a href="#den-fam-room" class="list-group-item list-group-item-action">Den/Family
+                                        Room</a>
                                 </div>
                             </div>
 
                         </div>
+
                         <div class="col-9">
                             <div class="page-title-box">
                                 <div class="page-title-right">
@@ -1047,506 +1065,765 @@
                                 </div>
 
                                 <div id="client-info"></div>
-                                <h4 class="page-title">Move Form</h4>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <!-- Pre-Filled Form -->
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="header-title">
-                                                    Client Info (Pre-Filled)
-                                                </h4>
-                                                <form class="form-horizontal" style="margin-left: 1rem;">
-                                                    <div class="form-group row mb-3">
-                                                        <label class="col-2 col-form-label">First Name: </label>
-                                                        <div class="col-9">
-                                                            <input type="text" readonly class="form-control-plaintext"
-                                                                value="Sally">
+                                <div id="move-form">
+                                    <h4 class="page-title">Move Form</h4>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <!-- Pre-Filled Form -->
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="header-title">
+                                                        Client Info (Pre-Filled)
+                                                    </h4>
+                                                    <form class="form-horizontal" style="margin-left: 1rem;">
+                                                        <div class="form-group row mb-3">
+                                                            <label class="col-2 col-form-label">First Name: </label>
+                                                            <div class="col-9">
+                                                                <input type="text" readonly
+                                                                    class="form-control-plaintext" value="Sally">
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div class="form-group row mb-3">
-                                                        <label class="col-2 col-form-label">Last Name: </label>
-                                                        <div class="col-10">
-                                                            <input type="text" readonly class="form-control-plaintext"
-                                                                value="Jones">
+                                                        <div class="form-group row mb-3">
+                                                            <label class="col-2 col-form-label">Last Name: </label>
+                                                            <div class="col-10">
+                                                                <input type="text" readonly
+                                                                    class="form-control-plaintext" value="Jones">
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div class="form-group row mb-3">
-                                                        <label class="col-2 col-form-label">Phone: </label>
-                                                        <div class="col-10">
-                                                            <input type="text" readonly class="form-control-plaintext"
-                                                                value="540-356-1789">
+                                                        <div class="form-group row mb-3">
+                                                            <label class="col-2 col-form-label">Phone: </label>
+                                                            <div class="col-10">
+                                                                <input type="text" readonly
+                                                                    class="form-control-plaintext" value="540-356-1789">
+                                                            </div>
                                                         </div>
-                                                    </div>
 
-                                                    <div id="accessibility"></div>
+                                                        <div id="accessibility"></div>
 
-                                                    <div class="form-group row mb-3">
-                                                        <label class="col-2 col-form-label">Address: </label>
-                                                        <div class="col-10">
-                                                            <input type="text" readonly class="form-control-plaintext"
-                                                                value="800 South Main Street">
+                                                        <div class="form-group row mb-3">
+                                                            <label class="col-2 col-form-label">Address: </label>
+                                                            <div class="col-10">
+                                                                <input type="text" readonly
+                                                                    class="form-control-plaintext"
+                                                                    value="800 South Main Street">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </form>                                      
+                                                    </form>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <!-- ACCESSIBILITY -->
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="header-title">
-                                                    Accessibility
-                                                </h4>
-                                                <form class="form-horizontal">
-                                                    <div>
-                                                        <div class="form-group mb-3"
-                                                            style="margin-left: 1rem; padding-bottom: 0.5rem;">
-                                                            <div class="form-group">
-                                                                <label for="example-textarea">Distance from truck to
-                                                                    door:</label>
-                                                                <textarea class="form-control" id="example-textarea"
-                                                                    rows="5"></textarea>
-                                                            </div>
-
-                                                            <div class="form-group">
-                                                                <label for="example-textarea">Driveway accessibility:
-                                                                </label>
-                                                                <textarea class="form-control" id="example-textarea"
-                                                                    rows="5"></textarea>
-                                                            </div>
-
-                                                            <div class="form-group">
-                                                                <label for="example-textarea">Loading conditions
-                                                                    (circumstances that could make moving more
-                                                                    difficult): </label>
-                                                                <textarea class="form-control" id="example-textarea"
-                                                                    rows="5"
-                                                                    placeholder="Poor access for truck, Narrow gates, Steep driveway, etc."></textarea>
-                                                            </div>
-                                                            <div id="bedrooms"></div>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            </form> <!-- End form -->
-                                        </div> <!-- ACCESSIBILITY-->
-
-                                        <!-- HOUSE LAYOUT-->
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h4 class="header-title">
-                                                    House Layout
-                                                </h4>
-                                                <form class="form-horizontal">
-                                                    <div>
-                                                        <div class="form-group mb-3"
-                                                            style="margin-left: 1rem; padding-bottom: 0.5rem;">
-                                                            <label for="example-textarea" style="padding-top: 0.5rem;">
-                                                                1. BEDROOMS</label>
-                                                            <div class="indent">
+                                            <!-- ACCESSIBILITY -->
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="header-title">
+                                                        Accessibility
+                                                    </h4>
+                                                    <form class="form-horizontal">
+                                                        <div>
+                                                            <div class="form-group mb-3"
+                                                                style="margin-left: 1rem; padding-bottom: 0.5rem;">
                                                                 <div class="form-group">
-                                                                    <!-- <label for="example-textarea">Bedroom #1:</label> -->
-                                                                    <label for="example-textarea">• Bedroom #1</label>
-                                                                    <div class="indent">
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Location:</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control"
-                                                                                placeholder="Main, basement, 2floor">
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-textarea">Type of
-                                                                                Boxes</label>
-                                                                            <textarea class="form-control"
-                                                                                id="example-textarea"
-                                                                                rows="5"></textarea>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-select">Number of
-                                                                                Boxes</label>
-                                                                            <select class="form-control"
-                                                                                id="example-select">
-                                                                                <option>Select</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                            </select>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Blankets:</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control">
-                                                                        </div>
-                                                                    </div>
+                                                                    <label for="example-textarea">Distance from
+                                                                        truck to
+                                                                        door:</label> <br>
+                                                                    <textarea class="form-control form-control-margin"
+                                                                        id="example-textarea" rows="5"></textarea>
                                                                 </div>
 
                                                                 <div class="form-group">
-                                                                    <label for="example-textarea">• Bedroom #2</label>
-                                                                    <div class="indent">
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Location:</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control"
-                                                                                placeholder="Main, basement, 2floor">
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-textarea">Type of
-                                                                                Boxes</label>
-                                                                            <textarea class="form-control"
-                                                                                id="example-textarea"
-                                                                                rows="5"></textarea>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-select">Number of
-                                                                                Boxes</label>
-                                                                            <select class="form-control"
-                                                                                id="example-select">
-                                                                                <option>Select</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                            </select>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Blankets:</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="form-group">
-                                                                    <label for="example-textarea">• Bedroom #3</label>
-                                                                    <div class="indent">
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Location:</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control"
-                                                                                placeholder="Main, basement, 2floor">
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-textarea">Type of
-                                                                                Boxes</label>
-                                                                            <textarea class="form-control"
-                                                                                id="example-textarea"
-                                                                                rows="5"></textarea>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-select">Number of
-                                                                                Boxes</label>
-                                                                            <select class="form-control"
-                                                                                id="example-select">
-                                                                                <option>Select</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                            </select>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Blankets:</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control">
-                                                                        </div>
-                                                                    </div>
+                                                                    <label for="example-textarea">Driveway
+                                                                        accessibility:
+                                                                    </label> <br>
+                                                                    <textarea class="form-control form-control-margin"
+                                                                        id="example-textarea" rows="5"></textarea>
                                                                 </div>
 
                                                                 <div class="form-group">
-                                                                    <label for="example-textarea">• Bedroom #4</label>
-                                                                    <div class="indent">
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Location:</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control"
-                                                                                placeholder="Main, basement, 2floor">
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-textarea">Type of
-                                                                                Boxes</label>
-                                                                            <textarea class="form-control"
-                                                                                id="example-textarea"
-                                                                                rows="5"></textarea>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-select">Number of
-                                                                                Boxes</label>
-                                                                            <select class="form-control"
-                                                                                id="example-select">
-                                                                                <option>Select</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                            </select>
-                                                                        </div>
-
-                                                                        <div id="living-room"></div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Blankets:</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control">
-                                                                        </div>
-                                                                       
-                                                                    </div>
+                                                                    <label for="example-textarea">Loading conditions
+                                                                        (circumstances that could make moving more
+                                                                        difficult): </label> <br>
+                                                                    <textarea class="form-control" id="example-textarea"
+                                                                        rows="5"
+                                                                        placeholder="Poor access for truck, Narrow gates, Steep driveway, etc."></textarea>
                                                                 </div>
-                                                            </div>
-
-                                                            <label for="example-textarea" class="label-top-padding"> 2.
-                                                                LIVING ROOM</label>
-                                                            <div class="indent">
-                                                                <div class="form-group">
-                                                                    <div>
-                                                                        <div class="form-group">
-                                                                            <label for="example-textarea">Type of
-                                                                                Boxes</label>
-                                                                            <textarea class="form-control"
-                                                                                id="example-textarea"
-                                                                                rows="5"></textarea>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-select">Number of
-                                                                                Boxes</label>
-                                                                            <select class="form-control"
-                                                                                id="example-select">
-                                                                                <option>Select</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                            </select>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-select">Number of
-                                                                                Sofas</label>
-                                                                            <select class="form-control"
-                                                                                id="example-select">
-                                                                                <option>Select</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                            </select>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Leather
-                                                                                Sofas</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <label for="example-textarea" class="label-top-padding"> 3.
-                                                                DINING ROOM</label>
-                                                            <div class="indent">
-                                                                <div class="form-group">
-                                                                    <div>
-                                                                        <div class="form-group">
-                                                                            <label for="example-textarea">Type of
-                                                                                Boxes</label>
-                                                                            <textarea class="form-control"
-                                                                                id="example-textarea"
-                                                                                rows="5"></textarea>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="example-select">Number of
-                                                                                Boxes</label>
-                                                                            <select class="form-control"
-                                                                                id="example-select">
-                                                                                <option>Select</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                            </select>
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="simpleinput">Server</label>
-                                                                            <input type="text" id="simpleinput"
-                                                                                class="form-control">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                <div id="bedrooms"></div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                </div>
+                                                </form> <!-- End form -->
+                                            </div> <!-- ACCESSIBILITY-->
+
+                                            <!-- HOUSE LAYOUT-->
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="header-title">
+                                                        House Layout
+                                                    </h4>
+                                                    <form class="form-horizontal">
+                                                        <div>
+                                                            <div class="form-group mb-3"
+                                                                style="margin-left: 1rem; padding-bottom: 0.5rem;">
+                                                                <label for="example-textarea"
+                                                                    style="padding-top: 0.5rem;">
+                                                                    1. BEDROOMS</label>
+                                                                <div class="indent">
+                                                                    <div class="form-group">
+                                                                        <!-- <label for="example-textarea">Bedroom #1:</label> -->
+                                                                        <label for="example-textarea">• Bedroom
+                                                                            #1</label>
+                                                                        <div class="indent">
+                                                                            <div class="form-group">
+                                                                                <label
+                                                                                    for="simpleinput">Location:</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin"
+                                                                                    placeholder="Main, basement, 2floor">
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-textarea">Type
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <textarea
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-textarea"
+                                                                                    rows="5"></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-select">Number
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <select
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-select">
+                                                                                    <option>Select</option>
+                                                                                    <option>1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label
+                                                                                    for="simpleinput">Blankets:</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <label for="example-textarea">• Bedroom
+                                                                            #2</label>
+                                                                        <div class="indent">
+                                                                            <div class="form-group">
+                                                                                <label
+                                                                                    for="simpleinput">Location:</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin"
+                                                                                    placeholder="Main, basement, 2floor">
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-textarea">Type
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <textarea
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-textarea"
+                                                                                    rows="5"></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-select">Number
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <select
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-select">
+                                                                                    <option>Select</option>
+                                                                                    <option>1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label
+                                                                                    for="simpleinput">Blankets:</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div class="form-group">
+                                                                        <label for="example-textarea">• Bedroom
+                                                                            #3</label>
+                                                                        <div class="indent">
+                                                                            <div class="form-group">
+                                                                                <label
+                                                                                    for="simpleinput">Location:</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin"
+                                                                                    placeholder="Main, basement, 2floor">
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-textarea">Type
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <textarea
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-textarea"
+                                                                                    rows="5"></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-select">Number
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <select
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-select">
+                                                                                    <option>Select</option>
+                                                                                    <option>1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label
+                                                                                    for="simpleinput">Blankets:</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <label for="example-textarea">• Bedroom
+                                                                            #4</label>
+                                                                        <div class="indent">
+                                                                            <div class="form-group">
+                                                                                <label
+                                                                                    for="simpleinput">Location:</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin"
+                                                                                    placeholder="Main, basement, 2floor">
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-textarea">Type
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <textarea
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-textarea"
+                                                                                    rows="5"></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-select">Number
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <select
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-select">
+                                                                                    <option>Select</option>
+                                                                                    <option>1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div id="living-room"></div>
+
+                                                                            <div class="form-group">
+                                                                                <label
+                                                                                    for="simpleinput">Blankets:</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin">
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <label for="example-textarea" class="label-top-padding">
+                                                                    2.
+                                                                    LIVING ROOM</label>
+                                                                <div class="indent">
+                                                                    <div class="form-group">
+                                                                        <div>
+                                                                            <div class="form-group">
+                                                                                <label for="example-textarea">Type
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <textarea
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-textarea"
+                                                                                    rows="5"></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-select">Number
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <select
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-select">
+                                                                                    <option>Select</option>
+                                                                                    <option>1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-select">Number
+                                                                                    of
+                                                                                    Sofas</label>
+                                                                                <select
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-select">
+                                                                                    <option>Select</option>
+                                                                                    <option>1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div id="dining-room"></div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="simpleinput">Leather
+                                                                                    Sofas</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <label for="example-textarea" class="label-top-padding">
+                                                                    3.
+                                                                    DINING ROOM</label>
+                                                                <div class="indent">
+                                                                    <div class="form-group">
+                                                                        <div>
+                                                                            <div class="form-group">
+                                                                                <label for="example-textarea">Type
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <textarea
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-textarea"
+                                                                                    rows="5"></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-select">Number
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <select
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-select">
+                                                                                    <option>Select</option>
+                                                                                    <option>1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div id="den-fam-room"></div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="simpleinput">Server</label>
+                                                                                <input type="text" id="simpleinput"
+                                                                                    class="form-control form-control-margin">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <label for="example-textarea" class="label-top-padding">
+                                                                    4.
+                                                                    Den/Family Room</label>
+                                                                <div class="indent">
+                                                                    <div class="form-group">
+                                                                        <div>
+                                                                            <div class="form-group">
+                                                                                <label for="example-textarea">Type
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <textarea
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-textarea"
+                                                                                    rows="5"></textarea>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <label for="example-select">Number
+                                                                                    of
+                                                                                    Boxes</label>
+                                                                                <select
+                                                                                    class="form-control form-control-margin"
+                                                                                    id="example-select">
+                                                                                    <option>Select</option>
+                                                                                    <option>1</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <div class="mt-3">
+                                                                                    <label for="simpleinput"
+                                                                                        class="margin-bot-div">Server</label>
+                                                                                    <div class="mt-2 indent-sm">
+                                                                                        <h6
+                                                                                            style="font-size: 14px; font-weight: 600;">
+                                                                                            High Value?</h6>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio1"
+                                                                                                name="customRadio1"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio1">Yes</label>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio2"
+                                                                                                name="customRadio2"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio2">No</label>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div style="margin-top: 0.4rem;"
+                                                                                        class="indent-sm">
+                                                                                        <div
+                                                                                            class="custom-control custom-checkbox">
+                                                                                            <input type="checkbox"
+                                                                                                class="custom-control-input"
+                                                                                                id="customCheck1">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customCheck1">Sideboard</label>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="custom-control custom-checkbox">
+                                                                                            <input type="checkbox"
+                                                                                                class="custom-control-input"
+                                                                                                id="customCheck2">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customCheck2">Mirror
+                                                                                                back</label>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="custom-control custom-checkbox">
+                                                                                            <input type="checkbox"
+                                                                                                class="custom-control-input"
+                                                                                                id="customCheck3">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customCheck3">Marble
+                                                                                                top</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="mt-3">
+                                                                                    <label for="simpleinput"
+                                                                                        class="margin-bot-div">China
+                                                                                        Press</label>
+                                                                                    <div class="mt-2 indent-sm">
+                                                                                        <h6
+                                                                                            style="font-size: 14px; font-weight: 600;">
+                                                                                            High Value?</h6>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio3"
+                                                                                                name="customRadio3"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio3">Yes</label>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio4"
+                                                                                                name="customRadio4"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio4">No</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div style="margin-top: 0.4rem;"
+                                                                                        class="indent-sm">
+                                                                                        <div
+                                                                                            class="custom-control custom-checkbox">
+                                                                                            <input type="checkbox"
+                                                                                                class="custom-control-input"
+                                                                                                id="customCheck4">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customCheck4">Bowfront</label>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="custom-control custom-checkbox">
+                                                                                            <input type="checkbox"
+                                                                                                class="custom-control-input"
+                                                                                                id="customCheck5">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customCheck5">2
+                                                                                                piece</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="mt-3">
+                                                                                    <label for="simpleinput"
+                                                                                        class="margin-bot-div">Table</label>
+                                                                                    <div class="mt-2 indent-sm">
+                                                                                        <h6
+                                                                                            style="font-size: 14px; font-weight: 600;">
+                                                                                            High Value?</h6>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio5"
+                                                                                                name="customRadio5"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio5">Yes</label>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio6"
+                                                                                                name="customRadio6"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio6">No</label>
+                                                                                        </div>
+                                                                                        <div class="form-group"
+                                                                                            style="padding-top: 0.7rem;">
+                                                                                            <label
+                                                                                                for="example-select">Number
+                                                                                                of leaves</label>
+                                                                                            <select class="form-control"
+                                                                                                id="example-select"
+                                                                                                style="margin-bottom: 1rem;">
+                                                                                                <option>Select
+                                                                                                </option>
+                                                                                                <option>1</option>
+                                                                                                <option>2</option>
+                                                                                                <option>3</option>
+                                                                                                <option>4</option>
+                                                                                                <option>5</option>
+                                                                                            </select>
+
+                                                                                            <label
+                                                                                                for="example-select">Number
+                                                                                                of chairs</label>
+                                                                                            <select
+                                                                                                class="form-control form-control-margin"
+                                                                                                id="example-select">
+                                                                                                <option>Select
+                                                                                                </option>
+                                                                                                <option>1</option>
+                                                                                                <option>2</option>
+                                                                                                <option>3</option>
+                                                                                                <option>4</option>
+                                                                                                <option>5</option>
+                                                                                            </select>
+                                                                                        </div>
+
+                                                                                    </div>
+
+                                                                                </div>
+
+
+                                                                                <div class="mt-3">
+                                                                                    <label for="simpleinput"
+                                                                                        class="margin-bot-div">Pedestal
+                                                                                        table/plant stand</label>
+                                                                                    <input type="text" id="simpleinput"
+                                                                                        class="form-control form-control-margin">
+                                                                                </div>
+
+                                                                                <div class="mt-3">
+                                                                                    <label for="simpleinput"
+                                                                                        class="margin-bot-div">Silver
+                                                                                        chest</label>
+                                                                                    <div class="mt-2 indent-sm">
+                                                                                        <h6
+                                                                                            style="font-size: 14px; font-weight: 600;">
+                                                                                            High Value?</h6>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio7"
+                                                                                                name="customRadio7"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio7">Yes</label>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio8"
+                                                                                                name="customRadio8"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio8">No</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="mt-3">
+                                                                                    <label for="simpleinput"
+                                                                                        class="margin-bot-div">Rug</label>
+                                                                                    <input type="text" id="simpleinput"
+                                                                                        class="form-control form-control-margin">
+                                                                                </div>
+
+                                                                                <div class="mt-3">
+                                                                                    <label for="simpleinput"
+                                                                                        class="margin-bot-div">Breakfront</label>
+                                                                                    <div class="mt-2 indent-sm">
+                                                                                        <h6
+                                                                                            style="font-size: 14px; font-weight: 600;">
+                                                                                            High Value?</h6>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio9"
+                                                                                                name="customRadio9"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio9">Yes</label>
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="custom-control custom-radio custom-control-inline">
+                                                                                            <input type="radio"
+                                                                                                id="customRadio10"
+                                                                                                name="customRadio10"
+                                                                                                class="custom-control-input">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customRadio10">No</label>
+                                                                                        </div>
+
+                                                                                        <div class="custom-control custom-checkbox"
+                                                                                            style="margin-top: 0.4rem;">
+                                                                                            <input type="checkbox"
+                                                                                                class="custom-control-input"
+                                                                                                id="customCheck6">
+                                                                                            <label
+                                                                                                class="custom-control-label"
+                                                                                                for="customCheck6">2
+                                                                                                piece</label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form> <!-- End form -->
+                                                </div>
                                             </div>
-                                            </form> <!-- End form -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- row -->
 
-                    <!-- end page title -->
+                        <!-- row -->
 
-                </div> <!-- container -->
+                        <!-- end page title -->
 
-            </div> <!-- content -->
+                    </div> <!-- container -->
 
-            <!-- Footer Start -->
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
-                        </div>
-                        <div class="col-md-6">
-                            <div class="text-md-right footer-links d-none d-md-block">
-                                <a href="javascript: void(0);">About</a>
-                                <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <script>document.write(new Date().getFullYear())</script> © Hyper - Coderthemes.com
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-right footer-links d-none d-md-block">
+                                    <a href="javascript: void(0);">About</a>
+                                    <a href="javascript: void(0);">Support</a>
+                                    <a href="javascript: void(0);">Contact Us</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </footer>
-            <!-- end Footer -->
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
 
         </div>
+        <!-- END wrapper -->
 
-        <!-- ============================================================== -->
-        <!-- End Page content -->
-        <!-- ============================================================== -->
-
-
-    </div>
-    <!-- END wrapper -->
-
-
-    <!-- Right Sidebar -->
-    <div class="right-bar">
-
-        <div class="rightbar-title">
-            <a href="javascript:void(0);" class="right-bar-toggle float-right">
-                <i class="dripicons-cross noti-icon"></i>
-            </a>
-            <h5 class="m-0">Settings</h5>
-        </div>
-
-        <div class="rightbar-content h-100" data-simplebar>
-
-            <div class="p-3">
-                <div class="alert alert-warning" role="alert">
-                    <strong>Customize </strong> the overall color scheme, sidebar menu, etc.
-                </div>
-
-                <!-- Settings -->
-                <h5 class="mt-3">Color Scheme</h5>
-                <hr class="mt-1" />
-
-                <div class="custom-control custom-switch mb-1">
-                    <input type="radio" class="custom-control-input" name="color-scheme-mode" value="light"
-                        id="light-mode-check" checked />
-                    <label class="custom-control-label" for="light-mode-check">Light Mode</label>
-                </div>
-
-                <div class="custom-control custom-switch mb-1">
-                    <input type="radio" class="custom-control-input" name="color-scheme-mode" value="dark"
-                        id="dark-mode-check" />
-                    <label class="custom-control-label" for="dark-mode-check">Dark Mode</label>
-                </div>
-
-                <!-- Width -->
-                <h5 class="mt-4">Width</h5>
-                <hr class="mt-1" />
-                <div class="custom-control custom-switch mb-1">
-                    <input type="radio" class="custom-control-input" name="width" value="fluid" id="fluid-check"
-                        checked />
-                    <label class="custom-control-label" for="fluid-check">Fluid</label>
-                </div>
-                <div class="custom-control custom-switch mb-1">
-                    <input type="radio" class="custom-control-input" name="width" value="boxed" id="boxed-check" />
-                    <label class="custom-control-label" for="boxed-check">Boxed</label>
-                </div>
-
-                <!-- Left Sidebar-->
-                <h5 class="mt-4">Left Sidebar</h5>
-                <hr class="mt-1" />
-                <div class="custom-control custom-switch mb-1">
-                    <input type="radio" class="custom-control-input" name="theme" value="default" id="default-check"
-                        checked />
-                    <label class="custom-control-label" for="default-check">Default</label>
-                </div>
-
-                <div class="custom-control custom-switch mb-1">
-                    <input type="radio" class="custom-control-input" name="theme" value="light" id="light-check" />
-                    <label class="custom-control-label" for="light-check">Light</label>
-                </div>
-
-                <div class="custom-control custom-switch mb-3">
-                    <input type="radio" class="custom-control-input" name="theme" value="dark" id="dark-check" />
-                    <label class="custom-control-label" for="dark-check">Dark</label>
-                </div>
-
-                <div class="custom-control custom-switch mb-1">
-                    <input type="radio" class="custom-control-input" name="compact" value="fixed" id="fixed-check"
-                        checked />
-                    <label class="custom-control-label" for="fixed-check">Fixed</label>
-                </div>
-
-                <div class="custom-control custom-switch mb-1">
-                    <input type="radio" class="custom-control-input" name="compact" value="condensed"
-                        id="condensed-check" />
-                    <label class="custom-control-label" for="condensed-check">Condensed</label>
-                </div>
-
-                <div class="custom-control custom-switch mb-1">
-                    <input type="radio" class="custom-control-input" name="compact" value="scrollable"
-                        id="scrollable-check" />
-                    <label class="custom-control-label" for="scrollable-check">Scrollable</label>
-                </div>
-
-                <button class="btn btn-primary btn-block mt-4" id="resetBtn">Reset to Default</button>
-
-                <a href="https://themes.getbootstrap.com/product/hyper-responsive-admin-dashboard-template/"
-                    class="btn btn-danger btn-block mt-3" target="_blank"><i class="mdi mdi-basket mr-1"></i> Purchase
-                    Now</a>
-            </div> <!-- end padding-->
-
-        </div>
-    </div>
-
-    <div class="rightbar-overlay"></div>
-    <!-- /Right-bar -->
-
-
-    <!-- bundle -->
-    <script src="assets/js/vendor.min.js"></script>
-    <script src="assets/js/app.min.js"></script>
-
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
 </body>
 
 </html>
